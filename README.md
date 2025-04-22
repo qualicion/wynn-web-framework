@@ -10,6 +10,7 @@ This repository contains automated tests for file upload functionality using Pla
 1. Clone this repository:
    ```
    git clone https://github.com/qualicion/wynn-web-framework
+   
    cd wynn-web-framework
    ```
 
