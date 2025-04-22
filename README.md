@@ -95,7 +95,7 @@ npx playwright show-report
 ## Adding New Tests
 
 1. Create test files in the appropriate directories
-2. For image uploads, place sample images in the `fixtures` folder
+2. For image uploads, place sample test data in the `fixtures` folder
 3. Follow the Page Object Model pattern for maintainable tests
 4. Use descriptive test and function names
 
