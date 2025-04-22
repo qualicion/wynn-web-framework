@@ -20,11 +20,15 @@ export class FileUploadedPage extends BasePage {
   }
 
   async verifyNetworkFailure() {
-    // If page doesn't navigate to success page
     const currentUrl = this.page.url();
-    expect(currentUrl).toContain("chrome-error://chromewebdata/");
 
-    // If no success message is shown
+    // To handle chrome error
+    if (currentUrl.includes('chrome-error://chromewebdata/')) {
+      console.log('Chrome-specific network error page detected');
+      return;
+    }
+    
+    expect(currentUrl).toContain("/upload");
     await expect(this.page.locator("text=File Uploaded!")).not.toBeVisible({
       timeout: 2000,
     });
